@@ -23,3 +23,31 @@
     // Using an array literal is shorter than above but allocates an empty array
     var args = [].slice.call(arguments);
     ```
+
+
+2. Difference between `for ... in` and `for ... of`  
+  
+```js
+var arr = ['red', 'green', 'blue']
+ 
+for(let item in arr) {
+  console.log('for in item', item)
+}
+/*
+    0 1 2
+*/
+ 
+for(let item of arr) {
+  console.log('for of item', item)
+}
+/*
+    red green blue
+*/
+```
+
+| | | |
+|-|-|-|
+|`for...in` | iterate by index (key names) | (Objects √ \| Arrays X )  |
+|  `for...of`  | iterate values  | (Arrays √ \| Objects X )  |
+- It is not recommended to use `for (let i in list)` on arrays since it can only get the key names
+- It is not recommended to use `for (let i of object)` on objects since objects are not iterable. (TypeError)
