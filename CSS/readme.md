@@ -71,10 +71,10 @@ According to [wonyun](https://www.cnblogs.com/wonyun/p/5807191.html) :
     width:0;height:0;border:40px solid; border-color:transparent transparent transparent #F00;
     }
 ```
-To draw a triangle with border, we need to use `::before` & `::after` to draw two different triangle with different color 
-
-<div class="main">
-</div>
+To draw a triangle with border, we need to use `::before` & `::after` to draw two different triangle with different color:   
+[demo](https://codepen.io/xzifan/pen/RwGBVJZ)  
+```html
+<div class='main'></div>
 <style>
     .main{
         position:relative;
@@ -102,3 +102,5 @@ To draw a triangle with border, we need to use `::before` & `::after` to draw tw
         index:2;
     }
 </style>
+```
+
